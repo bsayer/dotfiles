@@ -67,6 +67,9 @@ endif
 
 :nnoremap <F12> :buffers<CR>:buffer<Space>
 
+" Needed to recognize .md as markdown in older Vim versions
+au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+
 " phpqa settings
 "
 " Don't run messdetector on save (default = 1)
