@@ -16,3 +16,4 @@ export PATH=/Applications/MAMP/Library/bin:$PATH
 export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
 bindkey -v
 bindkey -M viins ‘jj’ vi-cmd-mode
+bindkey '^R' history-incremental-search-backward
