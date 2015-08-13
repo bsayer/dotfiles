@@ -11,13 +11,15 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 set relativenumber
-set cursorline
+"set cursorline
 set noshowmode
 set ttyfast
 set scrolloff=3
 set incsearch
 set showmatch
 set hlsearch
+" Escape insert mode with jk
+inoremap jk <ESC>
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
 " Goto paired brace with tab key
@@ -66,6 +68,12 @@ if has('mouse')
 endif
 
 :nnoremap <F12> :buffers<CR>:buffer<Space>
+
+augroup CursorLine
+    au!
+    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+    au WinLeave * setlocal nocursorline
+augroup END
 
 " Needed to recognize .md as markdown in older Vim versions
 au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
