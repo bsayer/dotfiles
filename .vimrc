@@ -22,12 +22,17 @@ set hlsearch
 inoremap jk <ESC>
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
+" Deal with trailing whitespace
+match ErrorMsg '\s\+$'
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
 " Goto paired brace with tab key
 nnoremap <tab> %
 vnoremap <tab> %
 " Vertical split and change to it
 nnoremap <leader>w <C-w>v<C-w>l
 set formatoptions=qrn1
+" Disable Ex mode
+nnoremap Q <nop>
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
