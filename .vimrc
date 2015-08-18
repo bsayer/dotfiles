@@ -33,6 +33,8 @@ nnoremap <leader>w <C-w>v<C-w>l
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
+" Let equals signs breath
+nnoremap <leader>= :%s/\s*\(==\<bar>!=\<bar><lt>=\<bar>>=\<bar><lt>\<bar>>\<bar>=\)\s*/ \1 /g<cr>
 
 " Switch syntax highlighting on, when the terminal has colors
 if &t_Co > 2 || has("gui_running")
