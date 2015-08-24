@@ -11,6 +11,7 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 set relativenumber
+set tags=./tags;
 "set cursorline
 set noshowmode
 set ttyfast
