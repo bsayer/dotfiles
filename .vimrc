@@ -12,7 +12,6 @@ set wildmenu
 set wildmode=list:longest
 set visualbell
 set relativenumber
-set tags=./tags;
 "set cursorline
 set noshowmode
 set ttyfast
@@ -20,8 +19,6 @@ set scrolloff=3
 set incsearch
 set showmatch
 set hlsearch
-" Escape insert mode with jk
-inoremap jk <ESC>
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
 " Deal with trailing whitespace
