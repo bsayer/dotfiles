@@ -5,6 +5,7 @@ call pathogen#helptags()
 set nocompatible
 filetype plugin indent on
 let mapleader = ","
+set shell=/bin/bash
 set modelines=0
 set encoding=utf-8
 set wildmenu
