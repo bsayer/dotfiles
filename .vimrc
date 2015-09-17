@@ -4,19 +4,19 @@ call pathogen#helptags()
 
 set nocompatible
 let mapleader = ","
+set shell=/bin/bash
 set modelines=0
 set wildmode=list:longest
 set visualbell
 set number
 set relativenumber
-set tags=./tags;
 "set cursorline
 set noshowmode
 set ttyfast
 set showmatch
 set hlsearch
-" Escape insert mode with jk
-inoremap jk <ESC>
+" Clear highlights
+nnoremap <leader><space> :noh<cr>
 " Deal with trailing whitespace
 match ErrorMsg '\s\+$'
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
