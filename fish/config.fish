@@ -8,6 +8,8 @@ set -g -x ARCHFLAGS="-arch x86_64"
 set -g -x fish_greeting ''
 set fish_key_bindings fish_vi_key_bindings
 #fish_vi_mode
+fish_color_search_match --background=white
+fish_color_selection --background=white
 # Fish git prompt
 set __fish_git_prompt_show_informative_status 'yes'
 set __fish_git_prompt_showdirtystate 'yes'
