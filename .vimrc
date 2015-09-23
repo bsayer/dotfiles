@@ -28,6 +28,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
+set foldmethod=syntax
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <leader>d :call pdv#DocumentWithSnip()<CR>
