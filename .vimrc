@@ -1,4 +1,3 @@
-filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -10,7 +9,6 @@ set wildmode=list:longest
 set visualbell
 set number
 set relativenumber
-"set cursorline
 set noshowmode
 set ttyfast
 set showmatch
@@ -29,8 +27,6 @@ set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
 set foldmethod=syntax
-
-syntax enable
 
 let php_folding = 1        "Set PHP folding of classes and functions.
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
