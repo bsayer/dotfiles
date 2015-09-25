@@ -26,7 +26,7 @@ nnoremap <leader>w <C-w>v<C-w>l
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
-set foldmethod=syntax
+set foldmethod=manual
 
 let php_folding = 1        "Set PHP folding of classes and functions.
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
