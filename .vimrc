@@ -1,4 +1,4 @@
-filetype off
+filetype plugin indent on
 execute pathogen#infect()
 call pathogen#helptags()
 
@@ -29,6 +29,13 @@ set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
 set foldmethod=syntax
+
+syntax enable
+
+let php_folding = 1        "Set PHP folding of classes and functions.
+let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
+let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
+let php_noShortTags = 1    "Disable PHP short tags.
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <leader>d :call pdv#DocumentWithSnip()<CR>
