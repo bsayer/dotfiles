@@ -32,7 +32,7 @@ call vundle#end()            " required
 "execute pathogen#infect()
 
 set nocompatible
-let mapleader = ","
+let mapleader = "\<space>"
 set shell=/bin/bash
 set modelines=0
 set wildmode=list:longest
