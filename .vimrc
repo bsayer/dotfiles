@@ -48,6 +48,8 @@ nnoremap <leader><space> :noh<cr>
 " Deal with trailing whitespace
 match ErrorMsg '\s\+$'
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+" Toggle paste
+nnoremap <Leader>v :set paste!<CR>
 " Goto paired brace with tab key
 nnoremap <tab> %
 vnoremap <tab> %
@@ -65,6 +67,15 @@ let php_noShortTags = 1    "Disable PHP short tags.
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <leader>d :call pdv#DocumentWithSnip()<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 set background=light
 colorscheme solarized
