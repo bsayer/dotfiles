@@ -1,5 +1,35 @@
-execute pathogen#infect()
-call pathogen#helptags()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tobyS/pdv'
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'joonty/vdebug'
+Plugin 'bling/vim-airline'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'joonty/vim-phpqa'
+Plugin 'joshhartigan/vim-reddit'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'tobyS/vmustache'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+"execute pathogen#infect()
 
 set nocompatible
 let mapleader = ","
