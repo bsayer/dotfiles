@@ -1,16 +1,44 @@
-filetype off
-execute pathogen#infect()
-call pathogen#helptags()
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+" The following are examples of different formats supported.
+" Keep Plugin commands between vundle#begin/end.
+" plugin on GitHub repo
+Plugin 'tpope/vim-fugitive'
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'tobyS/pdv'
+Plugin 'scrooloose/syntastic'
+Plugin 'SirVer/ultisnips'
+Plugin 'joonty/vdebug'
+Plugin 'bling/vim-airline'
+Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'joonty/vim-phpqa'
+Plugin 'joshhartigan/vim-reddit'
+Plugin 'tpope/vim-sensible'
+Plugin 'tpope/vim-surround'
+Plugin 'tobyS/vmustache'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+
+"execute pathogen#infect()
 
 set nocompatible
-let mapleader = ","
+let mapleader = "\<space>"
 set shell=/bin/bash
 set modelines=0
 set wildmode=list:longest
 set visualbell
 set number
 set relativenumber
-"set cursorline
 set noshowmode
 set ttyfast
 set showmatch
@@ -20,6 +48,8 @@ nnoremap <leader><space> :noh<cr>
 " Deal with trailing whitespace
 match ErrorMsg '\s\+$'
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+" Toggle paste
+nnoremap <Leader>v :set paste!<CR>
 " Goto paired brace with tab key
 nnoremap <tab> %
 vnoremap <tab> %
@@ -28,9 +58,24 @@ nnoremap <leader>w <C-w>v<C-w>l
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
+set foldmethod=manual
+
+let php_folding = 1        "Set PHP folding of classes and functions.
+let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
+let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
+let php_noShortTags = 1    "Disable PHP short tags.
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <leader>d :call pdv#DocumentWithSnip()<CR>
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 set background=light
 colorscheme solarized
