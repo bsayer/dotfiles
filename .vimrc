@@ -8,23 +8,25 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'tobyS/pdv'
-Plugin 'scrooloose/syntastic'
 Plugin 'SirVer/ultisnips'
-Plugin 'joonty/vdebug'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'altercation/vim-colors-solarized'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'terryma/vim-multiple-cursors'
+Plugin 'joonty/vdebug'
 Plugin 'joonty/vim-phpqa'
 Plugin 'joshhartigan/vim-reddit'
+Plugin 'kien/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/syntastic'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'tobyS/pdv'
+Plugin 'tobyS/vmustache'
+Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
-Plugin 'tobyS/vmustache'
+Plugin 'dag/vim-fish'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -150,5 +152,12 @@ if has("autocmd")
   au BufRead,BufNewFile *.mh set filetype=php
 
   augroup END
+
+	" Set up :make to use fish for syntax checking.
+	autocmd FileType fish compiler fish
+	" Set this to have long lines wrap inside comments.
+	autocmd FileType fish setlocal textwidth=79
+	" Enable folding of block structures in fish.
+	"autocmd FileType fish setlocal foldmethod=expr
 
 endif " has("autocmd")
