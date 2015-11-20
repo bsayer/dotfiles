@@ -21,9 +21,5 @@ case Bens-MacBook-Pro.local
 	set -g -x PATH  /Applications/MAMP/Library/bin /usr/local/bin $PATH
 	# Set JAVA_HOME for soapUI
 	set -x JAVA_HOME /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
-	if test ! -e /tmp/mysql.sock
-		echo "MySQL socket file not found. Creating the symlink."
-		sudo ln -s /Applications/MAMP/tmp/mysql/mysql.sock /tmp/mysql.sock
-	end
 case '*'
 end
