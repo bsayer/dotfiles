@@ -9,6 +9,7 @@ Plugin 'VundleVim/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
 Plugin 'SirVer/ultisnips'
+Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'bling/vim-airline'
@@ -61,11 +62,15 @@ set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
 set foldmethod=manual
+" Map leader-m to open the file in Marked
+nnoremap <Leader>m :silent !open -a Marked.app '%:p'<cr>
 
-let php_folding = 1        "Set PHP folding of classes and functions.
+nnoremap <silent><leader>n :set rnu! rnu? <cr>
+
+let php_folding = 0        "Set PHP folding of classes and functions.
 let php_htmlInStrings = 1  "Syntax highlight HTML code inside PHP strings.
 let php_sql_query = 1      "Syntax highlight SQL code inside PHP strings.
-let php_noShortTags = 1    "Disable PHP short tags.
+"let php_noShortTags = 1    "Disable PHP short tags.
 
 let g:pdv_template_dir = $HOME ."/.vim/bundle/pdv/templates_snip"
 nnoremap <buffer> <leader>d :call pdv#DocumentWithSnip()<CR>
@@ -107,14 +112,8 @@ endif
 
 :nnoremap <F12> :buffers<CR>:buffer<Space>
 
-augroup CursorLine
-    au!
-    au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-    au WinLeave * setlocal nocursorline
-augroup END
-
-" Needed to recognize .md as markdown in older Vim versions
-au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
+" UltiSnips Settings
+let g:UltiSnipsEditSplit="context"
 
 " phpqa settings
 "
@@ -133,25 +132,34 @@ let g:phpqa_open_loc = 1
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-  augroup vimrcEx
-  au!
+	augroup CursorLine
+		au!
+		au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+		au WinLeave * setlocal nocursorline
+	augroup END
 
-  " For all text files set 'textwidth' to 78 characters.
-  "autocmd FileType text setlocal textwidth=78
+	" Needed to recognize .md as markdown in older Vim versions
+	au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
 
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  " Also don't do it when the mark is in the first line, that is the default
-  " position when opening a file.
-  autocmd BufReadPost *
-    \ if line("'\"") > 1 && line("'\"") <= line("$") |
-    \   exe "normal! g`\"" |
-    \ endif
+	augroup vimrcEx
+	au!
 
-  au BufRead,BufNewFile *.mh set filetype=php
+	" For all text files set 'textwidth' to 78 characters.
+	"autocmd FileType text setlocal textwidth=78
 
-  augroup END
+	" When editing a file, always jump to the last known cursor position.
+	" Don't do it when the position is invalid or when inside an event handler
+	" (happens when dropping a file on gvim).
+	" Also don't do it when the mark is in the first line, that is the default
+	" position when opening a file.
+	autocmd BufReadPost *
+		\ if line("'\"") > 1 && line("'\"") <= line("$") |
+		\   exe "normal! g`\"" |
+		\ endif
+
+	au BufRead,BufNewFile *.mh set filetype=php
+
+	augroup END
 
 	" Set up :make to use fish for syntax checking.
 	autocmd FileType fish compiler fish
