@@ -12,7 +12,9 @@ Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'bling/vim-airline'
+"Plugin 'bling/vim-airline'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'joonty/vdebug'
 Plugin 'joonty/vim-phpqa'
@@ -35,6 +37,7 @@ call vundle#end()            " required
 "execute pathogen#infect()
 
 set nocompatible
+set gfn=Input:h12
 let mapleader = "\<space>"
 set shell=/bin/bash
 set modelines=0
@@ -58,6 +61,8 @@ nnoremap <tab> %
 vnoremap <tab> %
 " Vertical split and change to it
 nnoremap <leader>w <C-w>v<C-w>l
+" Date & time stamp
+nnoremap <leader>dt a<C-R>=strftime("%a %b %e %H:%M")<CR><Esc>
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
