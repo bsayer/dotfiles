@@ -31,6 +31,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'dag/vim-fish'
 Plugin 'shawncplus/phpcomplete.vim'
+Plugin 'craigemery/vim-autotag'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
