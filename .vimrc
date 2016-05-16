@@ -55,6 +55,8 @@ set showmatch
 set hlsearch
 " Clear highlights
 nnoremap <leader><space> :noh<cr>
+" Toggle cursorline
+nnoremap <leader>l :set cursorline!<CR>
 " Deal with trailing whitespace
 match ErrorMsg '\s\+$'
 nnoremap <Leader>rtw :%s/\s\+$//e<CR>
@@ -151,6 +153,7 @@ if has("autocmd")
 	augroup CursorLine
 		au!
 		au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+		au VimEnter,WinEnter,BufWinEnter * highlight cursorline cterm=NONE guibg=#EEE8D5 guifg=fg
 		au WinLeave * setlocal nocursorline
 	augroup END
 
