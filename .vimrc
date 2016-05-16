@@ -11,7 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'lifepillar/vim-solarized8'
+"Plugin 'altercation/vim-colors-solarized'
 "Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -38,6 +39,7 @@ call vundle#end()            " required
 
 "execute pathogen#infect()
 
+set termguicolors
 set nocompatible
 set gfn=Input:h12
 let mapleader = "\<space>"
@@ -96,8 +98,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-set background=light
-colorscheme solarized
+"set background=light
+"colorscheme solarized
+colorscheme solarized8_light_flat
+let g:solarized_visibility = "low"
 
 " Vim-Airline Settings
 let g:airline_powerline_fonts = 1
