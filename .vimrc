@@ -54,7 +54,7 @@ set ttyfast
 set showmatch
 set hlsearch
 " Clear highlights
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader>h :noh<cr>
 " Toggle cursorline
 nnoremap <leader>l :set cursorline!<CR>
 " Deal with trailing whitespace
@@ -117,6 +117,7 @@ let g:ctrlp_cmd='CtrlP'
 set wildignore+=*/tmp/*,*.git,*.so,*.swp,*.zip
 
 set colorcolumn=80,120
+set cursorline
 
 " tab settings
 set tabstop=3
@@ -153,7 +154,7 @@ if has("autocmd")
 	augroup CursorLine
 		au!
 		au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-		au VimEnter,WinEnter,BufWinEnter * highlight cursorline cterm=NONE guibg=#EEE8D5 guifg=fg
+		"au VimEnter,WinEnter,BufWinEnter * highlight cursorline cterm=NONE guibg=#EEE8D5 guifg=fg
 		au WinLeave * setlocal nocursorline
 	augroup END
 
