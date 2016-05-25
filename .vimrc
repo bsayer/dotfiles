@@ -53,8 +53,6 @@ set noshowmode
 set ttyfast
 set showmatch
 set hlsearch
-" Clear highlights
-nnoremap <leader>h :noh<cr>
 " Toggle cursorline
 nnoremap <leader>l :set cursorline!<CR>
 " Deal with trailing whitespace
@@ -117,7 +115,7 @@ let g:ctrlp_cmd='CtrlP'
 set wildignore+=*/tmp/*,*.git,*.so,*.swp,*.zip
 
 set colorcolumn=80,120
-set cursorline
+"set cursorline
 
 " tab settings
 set tabstop=3
@@ -151,12 +149,12 @@ let g:phpqa_open_loc = 1
 " Only do this part when compiled with support for autocommands.
 if has("autocmd")
 
-	augroup CursorLine
-		au!
-		au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
-		"au VimEnter,WinEnter,BufWinEnter * highlight cursorline cterm=NONE guibg=#EEE8D5 guifg=fg
-		au WinLeave * setlocal nocursorline
-	augroup END
+	"augroup CursorLine
+		"au!
+		"au VimEnter,WinEnter,BufWinEnter * setlocal cursorline
+		""au VimEnter,WinEnter,BufWinEnter * highlight cursorline cterm=NONE guibg=#EEE8D5 guifg=fg
+		"au WinLeave * setlocal nocursorline
+	"augroup END
 
 	" Needed to recognize .md as markdown in older Vim versions
 	au BufNewFile,BufFilePre,BufRead *.md set filetype=markdown
