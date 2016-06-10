@@ -11,8 +11,8 @@ Plugin 'VundleVim/Vundle.vim'
 Plugin 'SirVer/ultisnips'
 Plugin 'honza/vim-snippets'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'lifepillar/vim-solarized8'
-"Plugin 'altercation/vim-colors-solarized'
+"Plugin 'lifepillar/vim-solarized8'
+Plugin 'altercation/vim-colors-solarized'
 "Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
@@ -39,7 +39,6 @@ call vundle#end()            " required
 
 "execute pathogen#infect()
 
-set termguicolors
 set nocompatible
 set gfn=Input:h12
 let mapleader = "\<space>"
@@ -98,10 +97,10 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
-"set background=light
-"colorscheme solarized
-colorscheme solarized8_light_flat
-let g:solarized_visibility = "low"
+" Solarized Theme Settings
+set background=light
+colorscheme solarized
+call togglebg#map("<F4>")
 
 " Vim-Airline Settings
 let g:airline_powerline_fonts = 1
@@ -115,7 +114,7 @@ let g:ctrlp_cmd='CtrlP'
 set wildignore+=*/tmp/*,*.git,*.so,*.swp,*.zip
 
 set colorcolumn=80,120
-"set cursorline
+set cursorline
 
 " tab settings
 set tabstop=3
