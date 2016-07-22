@@ -131,7 +131,6 @@ endif
 :nnoremap <F12> :buffers<CR>:buffer<Space>
 
 " dbext
-let g:dbext_default_profile_mySQLServer = 'type=SQLSRV:integratedlogin=1:srvname=localhost:dbname=medhub'
 let g:dbext_default_profile_mySQL = 'type=MYSQL:user=root:passwd=admin27:dbname=medhub'
 
 " UltiSnips Settings
