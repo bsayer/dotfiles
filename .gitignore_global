@@ -2,6 +2,7 @@
 .DS_Store
 *.vim
 fish_read_history
+.netrwhist
 bundle/*
 
 # Created by .ignore support plugin (hsz.mobi)
