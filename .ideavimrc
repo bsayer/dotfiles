@@ -1,0 +1,11 @@
+set vim-surround
+let mapleader = "\<space>"
+set visualbell
+set number
+set relativenumber
+set showmatch
+set hlsearch
+
+" Goto paired brace with tab key
+nnoremap <tab> %
+vnoremap <tab> %
