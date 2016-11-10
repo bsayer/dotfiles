@@ -4,7 +4,6 @@
 fish_read_history
 .netrwhist
 bundle/*
-.ideavimrc
 .idea
 
 # Created by .ignore support plugin (hsz.mobi)
