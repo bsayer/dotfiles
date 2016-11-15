@@ -100,7 +100,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Solarized Theme Settings
-set background=light
+set background=dark
 colorscheme solarized
 call togglebg#map("<F4>")
 
