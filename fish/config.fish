@@ -17,7 +17,7 @@ set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_showcolorhints 'yes'
 switch (uname -n)
 case Bens-MBP.local
-case ben-dev.local
+case asc-C02Q31DUG8WP.local
 	# Ensure user-installed binaries take precedence
 	set -g -x PATH  /Applications/MAMP/Library/bin /usr/local/bin /Applications/MAMP/bin /Applications/MAMP/bin/php/php5.5.26/bin $PATH
 	# Set JAVA_HOME for soapUI
