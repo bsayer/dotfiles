@@ -19,7 +19,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'joonty/vdebug'
 Plugin 'joonty/vim-phpqa'
-Plugin 'joshhartigan/vim-reddit'
+"Plugin 'joshhartigan/vim-reddit'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
 Plugin 'scrooloose/nerdcommenter'
@@ -100,7 +100,7 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 " Solarized Theme Settings
-set background=light
+set background=dark
 colorscheme solarized
 call togglebg#map("<F4>")
 
