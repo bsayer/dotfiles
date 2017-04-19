@@ -19,7 +19,7 @@ switch (uname -n)
 case Bens-MBP.local
 case asc-C02Q31DUG8WP.local
 	# Ensure user-installed binaries take precedence
-	set -g -x PATH  /Applications/MAMP/Library/bin /usr/local/bin /Applications/MAMP/bin /Applications/MAMP/bin/php/php5.5.26/bin $PATH
+	set -g -x PATH  /Applications/MAMP/Library/bin /usr/local/bin /Applications/MAMP/bin /Applications/MAMP/bin/php/php5.5.38 $PATH
 	# Set JAVA_HOME for soapUI
 	set -x JAVA_HOME /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
 case '*'
