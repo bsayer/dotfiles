@@ -35,6 +35,7 @@ Plugin 'dag/vim-fish'
 Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'craigemery/vim-autotag'
 Plugin 'vim-scripts/dbext.vim'
+Plugin 'vimoutliner/vimoutliner'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
