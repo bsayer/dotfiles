@@ -8,33 +8,33 @@ Plugin 'VundleVim/Vundle.vim'
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
 " plugin on GitHub repo
-Plugin 'SirVer/ultisnips'
-Plugin 'honza/vim-snippets'
-Plugin 'airblade/vim-gitgutter'
+"Plugin 'SirVer/ultisnips'
+"Plugin 'honza/vim-snippets'
+"Plugin 'airblade/vim-gitgutter'
 "Plugin 'lifepillar/vim-solarized8'
 Plugin 'altercation/vim-colors-solarized'
 "Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-buffergator'
-Plugin 'joonty/vdebug'
-Plugin 'joonty/vim-phpqa'
+"Plugin 'joonty/vdebug'
+"Plugin 'joonty/vim-phpqa'
 "Plugin 'joshhartigan/vim-reddit'
 Plugin 'kien/ctrlp.vim'
 Plugin 'mileszs/ack.vim'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/syntastic'
+"Plugin 'scrooloose/nerdcommenter'
+"Plugin 'scrooloose/syntastic'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tobyS/pdv'
-Plugin 'tobyS/vmustache'
+"Plugin 'tobyS/pdv'
+"Plugin 'tobyS/vmustache'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'dag/vim-fish'
-Plugin 'shawncplus/phpcomplete.vim'
-Plugin 'craigemery/vim-autotag'
-Plugin 'vim-scripts/dbext.vim'
+"Plugin 'shawncplus/phpcomplete.vim'
+"Plugin 'craigemery/vim-autotag'
+"Plugin 'vim-scripts/dbext.vim'
 Plugin 'vimoutliner/vimoutliner'
 
 " All of your Plugins must be added before the following line
@@ -129,6 +129,9 @@ if has('mouse')
 endif
 
 :nnoremap <F12> :buffers<CR>:buffer<Space>
+
+" VimOutliner
+let maplocalleader = ',,'
 
 " dbext
 let g:dbext_default_profile_mySQL = 'type=MYSQL:user=root:passwd=admin27:dbname=medhub'
