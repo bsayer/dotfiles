@@ -99,10 +99,12 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+colorscheme darcula
+
 " Solarized Theme Settings
-set background=dark
-colorscheme solarized
-call togglebg#map("<F4>")
+"set background=dark
+"colorscheme solarized
+"call togglebg#map("<F4>")
 
 " Vim-Airline Settings
 let g:airline_powerline_fonts = 1
