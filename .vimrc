@@ -117,7 +117,7 @@ let g:ctrlp_map='<Leader>p'
 let g:ctrlp_cmd='CtrlP'
 set wildignore+=*/tmp/*,*.git,*.so,*.swp,*.zip
 
-set colorcolumn=80,120
+"set colorcolumn=80,120
 set cursorline
 
 " tab settings
