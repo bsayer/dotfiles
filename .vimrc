@@ -73,7 +73,7 @@ nnoremap <leader>dt a### <C-R>=strftime("%a %b %e %H:%M")<CR> ###<CR><CR><Esc>
 set formatoptions=qrn1
 " Disable Ex mode
 nnoremap Q <nop>
-set foldmethod=manual
+set foldmethod=syntax
 " Map leader-m to open the file in Marked
 nnoremap <Leader>m :silent !open -a Marked.app '%:p'<cr>
 
@@ -126,6 +126,9 @@ set tabstop=3
 set softtabstop=3
 set shiftwidth=3
 set shiftround
+
+let g:lua_syntax_fold_function = 1
+let g:lua_syntax_fold_table = 1
 
 if has('mouse')
   set mouse=a
