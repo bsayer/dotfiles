@@ -192,6 +192,11 @@ if has("autocmd")
 
 	augroup END
 
+	augroup XML
+		autocmd!
+		autocmd FileType xml setlocal foldmethod=indent foldlevelstart=999 foldminlines=0
+	augroup END
+
 	" Set up :make to use fish for syntax checking.
 	autocmd FileType fish compiler fish
 	" Set this to have long lines wrap inside comments.
