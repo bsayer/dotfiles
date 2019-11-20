@@ -17,6 +17,7 @@ Plugin 'altercation/vim-colors-solarized'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'jeetsukumaran/vim-buffergator'
+Plugin 'easymotion/vim-easymotion'
 "Plugin 'joonty/vdebug'
 "Plugin 'joonty/vim-phpqa'
 "Plugin 'joshhartigan/vim-reddit'
@@ -45,7 +46,6 @@ call vundle#end()            " required
 
 set nocompatible
 set gfn=Input:h12
-let mapleader = "\<space>"
 set shell=/bin/bash
 set modelines=0
 set wildmode=list:longest
