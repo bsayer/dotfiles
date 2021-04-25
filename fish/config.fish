@@ -16,6 +16,8 @@ set __fish_git_prompt_showuntrackedfiles 'yes'
 set __fish_git_prompt_showupstream 'yes'
 set __fish_git_prompt_showcolorhints 'yes'
 switch (uname -n)
+case budgie
+	 set -g -x PATH ~/.emacs.d/bin $PATH
 case Bens-MBP.local
 	 set -g -x PATH ~/.emacs.d/bin $PATH
 case asc-C02Q31DUG8WP.local
@@ -25,7 +27,7 @@ case asc-C02Q31DUG8WP.local
 	set -x JAVA_HOME /Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Home/bin/java
 	# Create useful lists for interrogating servers
 	set -x racks blue green maize
-   set -x clusters a b
+	set -x clusters a b
 	set -x dbservers 1 2 3
 	set -x webservers 1 2 3 4 5
 	set -x servers apps web1 web2 web3 web4 web5 dba1 dba2 dba2 dbb1 dbb2 dbb3
