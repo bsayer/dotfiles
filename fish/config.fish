@@ -20,6 +20,7 @@ case budgie
 	 set -g -x PATH ~/.emacs.d/bin $PATH
 case Bens-MacBook-Pro.local
 	 set -g -x PATH ~/.emacs.d/bin $PATH
+	 set -g -x PATH ~/.cargo/bin $PATH
 case asc-C02Q31DUG8WP.local
 	# Ensure user-installed binaries take precedence
 	set -g -x PATH /usr/local/bin $PATH
