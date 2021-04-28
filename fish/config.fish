@@ -18,7 +18,7 @@ set __fish_git_prompt_showcolorhints 'yes'
 switch (uname -n)
 case budgie
 	 set -g -x PATH ~/.emacs.d/bin $PATH
-case Bens-MBP.local
+case Bens-MacBook-Pro.local
 	 set -g -x PATH ~/.emacs.d/bin $PATH
 case asc-C02Q31DUG8WP.local
 	# Ensure user-installed binaries take precedence
